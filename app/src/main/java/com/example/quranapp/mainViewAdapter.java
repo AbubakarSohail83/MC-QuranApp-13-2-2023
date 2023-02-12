@@ -1,7 +1,9 @@
 package com.example.quranapp;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,13 +23,17 @@ public class mainViewAdapter extends RecyclerView.Adapter<mainViewAdapter.mainVi
     @NonNull
     @Override
 
-    public mainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { //It will create view holder and store views in them
-        return null;
+    public mainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { //It will create view holder and store views in them, whenever recycler view will be created this function will be called
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        //creating a view with inflater
+        View view= inflater.inflate(R.layout.list_item_layout, parent, false);
+
+        return new mainViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull mainViewHolder holder, int position) { //this method will bind the views with data
-
+        holder.txtParaName.setText(data[position]);
     }
 
     @Override
@@ -36,8 +42,10 @@ public class mainViewAdapter extends RecyclerView.Adapter<mainViewAdapter.mainVi
     }
 
     public class mainViewHolder extends RecyclerView.ViewHolder{
+        TextView txtParaName;
         public mainViewHolder(@NonNull View itemView) {
             super(itemView);
+            txtParaName= (TextView) itemView.findViewById(R.id.textViewParaName);
         }
     }
 }
