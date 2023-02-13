@@ -40,6 +40,7 @@ public class mainViewAdapter extends RecyclerView.Adapter<mainViewAdapter.mainVi
     @Override
     public int getItemCount() {     //tells the count of data in recycler View's Adapter
         return data.size();
+
     }
 
     public class mainViewHolder extends RecyclerView.ViewHolder{

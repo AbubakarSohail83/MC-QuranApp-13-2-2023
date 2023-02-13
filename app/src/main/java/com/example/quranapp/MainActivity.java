@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        String searchCategory = intent.getStringExtra("category");
+
+
         RecyclerView mainView=(RecyclerView) findViewById(R.id.mainRecyclerView);
         mainView.setLayoutManager(new LinearLayoutManager(this));
         ArrayList paraNames=new ArrayList<String>();

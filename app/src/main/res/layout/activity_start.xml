@@ -4,6 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_start">
+    android:onClick="surahView"
+    tools:context=".activity_start"
+    tools:layout_editor_absoluteX="-13dp"
+    tools:layout_editor_absoluteY="-221dp">
 
+    <TextView
+        android:id="@+id/startActTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Al Quran App"
+        android:textAlignment="center"
+        android:textColor="@color/AppGreen"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="109dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="76dp"
+        android:backgroundTint="@color/AppGreen"
+        android:onClick="paraView"
+        android:text="Para"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startActTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="106dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="@color/AppGreen"
+        android:text="Surah"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startActTitle"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E40505"
+        android:onClick="exitApp"
+        android:text="Exit"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
 </androidx.constraintlayout.widget.ConstraintLayout>
