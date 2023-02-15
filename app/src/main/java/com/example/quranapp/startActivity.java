@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class startActivity extends AppCompatActivity {
 
@@ -18,14 +19,14 @@ public class startActivity extends AppCompatActivity {
 
     }
 
-    public void paraView()
+    public void paraView(View view)
     {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.putExtra("category","p");
         startActivity(intent);
     }
 
-    public void surahView()
+    public void surahView(View view)
     {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.putExtra("category","s");

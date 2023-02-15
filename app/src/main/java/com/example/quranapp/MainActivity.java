@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView mainView=(RecyclerView) findViewById(R.id.mainRecyclerView);
         mainView.setLayoutManager(new LinearLayoutManager(this));
+
         ArrayList paraNames=new ArrayList<String>();
         for(int i=0;i<30;i++)
         {
@@ -29,7 +30,13 @@ public class MainActivity extends AppCompatActivity {
             System.out.print(temp);
             paraNames.add(temp);
         }
-        mainView.setAdapter(new mainViewAdapter(paraNames));
+
+        ArrayList surahNames=new ArrayList<String>();
+
+        if(searchCategory=="p")
+            mainView.setAdapter(new mainViewAdapter(paraNames));
+        else if(searchCategory=="s")
+            mainView.setAdapter(new mainViewAdapter(surahNames));
     }
 
 }
